@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+<!--displays a form for uploading audio files using the form.as_p  template tag-->
+
+{% block content %}
+<div class="container">
+  <h1>Upload Audio File</h1>
+ <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Upload</button>
+</form>
+
+</div> 
+{% endblock %}
+
